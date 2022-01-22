@@ -1,0 +1,58 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+
+        li {
+            float: left;
+            font-size: 30px;
+        }
+
+        li a {
+            display: block;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        #logo {
+            position: relative;
+            z-index: 1;
+        }
+        a, a:hover, a:focus, a:active {
+            text-decoration: none;
+            color: #DAA520;
+        }
+
+        #signin {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><img id="logo" src="~/img/logocoffee.png" style="height:150px; width: 150px" /></li>
+        <li><a href="@Url.Action("ClientView","Home")">News</a></li>
+        <li><a href="@Url.Action("MenuView", "Home")">Menu</a></li>
+        <li><a href="@Url.Action("AboutView", "Home")">About us</a></li>
+        <li style="float:right"><a href="@Url.Action("SigninView", "Home")">Sign in</a></li>
+    </ul>
+
+</body>
+</html>
+

@@ -1,0 +1,116 @@
+﻿
+@{
+    ViewBag.Title = "CreateAccView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        /* Bordered form */
+        form {
+            border: 3px solid #f1f1f1;
+        }
+
+        /* Full-width inputs */
+        input[type=text], input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            padding: 5px 30px;
+            border: none;
+            outline: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 20px;
+            display: block;
+            margin: 0 auto;
+            transition: 0.2s all;
+        }
+
+            button:hover {
+                transform: scale(1.08);
+            }
+
+        #btn {
+            background-color: #333;
+        }
+
+
+        .cancelbtn {
+            width: auto;
+            padding: 10px 18px;
+            background-color: #f44336;
+        }
+
+        /* Center the avatar image inside this container */
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+        /* Avatar image */
+        img.avatar {
+            width: 10%;
+            border-radius: 50%;
+        }
+
+        /* Add padding to containers */
+        .container {
+            padding: 16px;
+            justify-content: center;
+        }
+
+        /* The "Forgot password" text */
+        span.psw {
+            padding-top: 16px;
+        }
+
+        body {
+            text-align: center;
+        }
+
+        form {
+            display: inline-block;
+        }
+        
+    </style>
+</head>
+<body>
+    <br /><br /><br />
+    <form action="action_page.php" method="post">
+        <div class="imgcontainer">
+            <img src="~/img/profilepicture.png" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label for="uname"><b>Username</b></label>
+            <input type="text" placeholder="Enter Username" name="uname" required>
+
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            <label for="pswc"><b>Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="pswc" required>
+            <button>Confirm</button>
+
+
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <p class="create"><a href="@Url.Action("SigninView","Home")">I already have an account</a></p>
+
+        </div>
+    </form>
+
+</body>
+</html>
+

@@ -1,0 +1,96 @@
+﻿
+@{
+    ViewBag.Title = "AdminView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>MenuView</title>
+    <style>
+        .vertical-menu {
+            width: 200px;
+            height: 150px;
+            overflow-y: auto;
+        }
+
+            .vertical-menu a {
+                background-color: #eee;
+                color: black;
+                display: block;
+                padding: 12px;
+                text-decoration: none;
+            }
+
+                .vertical-menu a:hover {
+                    background-color: #ccc;
+                }
+
+                .vertical-menu a.active {
+                    background-color: #333;
+                    color: white;
+                }
+       
+     
+    </style>
+</head>
+<body>
+    <br />  <br />  <br />  <br />  <br />
+    <h1>Welcome Back! Admin</h1>
+    <br />
+    <br />
+    <br />
+    <br />
+
+
+
+    <div class="vertical-menu" style="width:800px; margin:0 auto;">
+        <a href="#" class="active">Last Orders</a>
+        <a href="#">David Tordjman - 8min ago</a>
+        <a href="#">Rachel Cohen - 7min ago</a>
+        <a href="#">Michael Lalouch - 5min ago</a>
+        <a href="#">Dina Levinsky - 3min ago</a>
+        <a href="#">Shlomo Azulai - 3min ago</a>
+        <a href="#">Shmouel Trabelsi - 2min ago</a>
+        <a href="#">Mike Levy - 1min ago</a>
+        <a href="#">Rebecca David - 1min ago</a>
+        <a href="#">Esther Bokobza - 0min ago</a>
+    </div>
+    <br />
+    <br />
+    <br />
+
+
+    <div class="vertical-menu" style="width:800px; margin:0 auto;">
+        <a href="#" class="active">Available Tables</a>
+        <a href="#">Table #3 - 4 places</a>
+        <a href="#">Table #5 - 2 places</a>
+        <a href="#">Table #1 - 1 place</a>
+
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <div class="vertical-menu" style="width:800px; margin:0 auto;">
+        <a href="#" class="active">Active Baristas</a>
+        <a href="#">Yehouda Levin</a>
+        <a href="#">Mordechai Zevulun</a>
+        <a href="#">Rachel Ayache</a>
+
+    </div>
+
+
+
+
+
+
+    <button id="logoff"><a href="@Url.Action("MenuView", "Home")">Log off</a></button>
+
+</body>
+</html>
+

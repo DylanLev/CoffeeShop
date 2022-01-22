@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewBag.Title = "ClientView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+    <style>
+        #el1, #el2, #el3 {
+            background-color: navajowhite;
+            width: 1000px;
+            height: 300px;
+            border-style: solid;
+            padding: 20px;
+            margin-left: 80px;
+            margin-right: 80px;
+            margin-top: 50px;
+            margin-bottom: 20px;
+        }
+        img{
+            float: left;
+        }
+        p {
+            position: relative;
+            left: 20px;
+            top: 2px;
+            vertical-align: middle;
+        }
+        h1{
+            color:black;
+
+        }
+    </style>
+</head>
+<body>
+    <h1><br/><br />News</h1>
+    <div id="el1">
+        <h3><a href="home/menu/americano">All time classic: The Café Americano</a></h3>
+        <img src="~/img/americano.jpg" alt="Site Logo" style="height:200px; width: 200px" />
+        <p><b>
+        Shots of espresso topped with hot water create a light coating of creme that culminates<br /> in this wonderfully rich cup with depth and undertone. <br />
+        Pro tip: For an extra boost, have your barista try this with an extra kick.
+        </b>
+        </p>
+    </div>
+    <div id="el2">
+        <h3><a href="home/menu/capuccino">Delicious: The Capuccino</a></h3>
+        <img src="~/img/cappucino.png" alt="Site Logo" style="height:200px; width: 200px" />
+        <p><b>
+    Dark, rich espresso awaits beneath a smooth, stretched layer of thick milk froth. <br />
+    An alchemy of barista art and craftsmanship.
+        </b>
+        </p>
+    </div>
+    <div id="el3">
+        <h3><a href="home/menu/macchiato">Caramel Macchiato is back!</a></h3>
+        <img src="~/img/macchiato.jpg" alt="Site Logo" style="height:200px; width: 200px" />
+        <p><b>
+    Freshly steamed milk with a vanilla syrup marked with espresso <br />and topped with a drizzle of caramel for an oh-so-sweet finish.
+        </b>
+        </p>
+    </div>
+
+
+
+</body>
+</html>
+

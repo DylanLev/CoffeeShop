@@ -1,0 +1,83 @@
+﻿@model CoffeeShop.Models.RegistrationViewModel
+@{
+    ViewBag.Title = "RegistrationView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<br />
+<br />
+<br />
+<br />
+<br />
+
+
+<div class="col-md-3">
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h4>New Account</h4>
+
+        </div>
+        <div class="panel-body">
+            <img src="~/img/profilepicture.png" class="img-responsive"/>
+            <p>Fill this form to Register into CafeLevy</p>
+        </div>
+    </div>
+</div>
+
+<div class="col_md-9">
+    <form id="myform">
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.Username, new { @class = "form-control", @placeholder = "Username" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.Email, new { @class = "form-control", @placeholder = "Email" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.PasswordFor(m => m.Password, new { @class = "form-control", @placeholder = "Password" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-12">
+                @Html.TextBoxFor(m => m.Country, new { @class = "form-control", @placeholder = "Country" })
+            </div>
+        </div>
+        <br />
+        <div class="form-group">
+            <div class="col-md-12">
+              <a href="#" class="btn btn-primary" onclick="RegisterUser()">Submit</a>
+                    <!--<input type="button" value="Submit" onclick="RegisterUser()"/>-->
+            </div>
+        </div>
+
+    </form>
+
+</div>
+
+<script>
+    var RegisterUser = function () {
+        debugger
+        var data = $("#myform").serialize();
+
+        $.ajax({
+            type:"POST",
+            url: "/Home/RegisterUser",
+            data: data,
+            success: function (response) {
+                alert("success");
+
+            }
+
+        })
+    }
+</script>
+
+
+

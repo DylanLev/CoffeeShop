@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        @Html.Partial("_Header")
+    </header>
+
+    <!-- Content Body -->
+    <div class="content">
+        @RenderBody()
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p><b>© 2021 - Café Levy</b> </p>
+    </footer>
+
+    <!-- Style -->
+    <style>
+        .content {
+            
+            padding: 20px;
+        }
+        footer {
+            text-align: center;
+            position: fixed;
+            height: 50px;
+            bottom: 0px;
+            left: 0px;
+            right: 0px;
+            margin-bottom: 0px;
+        }
+    </style>
+</body>
+</html>  
